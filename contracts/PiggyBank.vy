@@ -1,4 +1,3 @@
-
 # Piggy bank contract
 
 # Var: Owner of the piggy bank (tx.origin) 
@@ -13,11 +12,12 @@ name: public(String[100])
 expiration_date: public(uint256)
 total_amount: uint256
 
-
+"""
 # Func: init
 # Func: change the name of the piggy bank
 # Func: Amount of money that any user is putting into the piggy bank
 # Func: withdrawing the money
+"""
 
 @external
 def __init__(_name: String[100], _expiration_date: uint256):
@@ -36,14 +36,8 @@ def set_name(_name: String[100]):
 def donate():
     self.total_amount += msg.value
 
-@external
 @view
+@external
 def get_total_amount() -> uint256:
     return self.total_amount
-
-
-    
-
-
-
 
