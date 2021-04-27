@@ -25,4 +25,3 @@ def donate():
 @external
 def get_total_amount() -> uint256:
     return self.total_amount
-
