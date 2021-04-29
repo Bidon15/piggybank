@@ -1,6 +1,11 @@
 import { task } from "hardhat/config";
 import "@nomiclabs/hardhat-waffle";
-import "@nomiclabs/hardhat-vyper";
+import "@nomiclabs/hardhat-ethers";
+import "hardhat-deploy-ethers";
+import "hardhat-deploy";
+import "@symfoni/hardhat-react";
+import "hardhat-typechain";
+import "@typechain/ethers-v5";
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -19,8 +24,22 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 export default {
-  vyper: {
-    version: "0.2.8"
+  react: {
+    providerPriority: ["web3modal", "hardhat"],
+  },
+
+  solidity: {
+    compilers: [
+      {
+        version: "0.7.3",
+        settings: {
+          optimizer: {
+            enabled: true,
+            runs: 50,
+          },
+        },
+      },
+    ],
   }
 };
 

@@ -15,8 +15,8 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const PiggyBank = await hre.ethers.getContractFactory("PiggyBank");
-  const piggy = await PiggyBank.deploy("Hello, Hardhat!");
+  const PiggyBank = await hre.ethers.getContractFactory("piggyBank");
+  const piggy = await PiggyBank.deploy("Hardhat!", 1619807414);
 
   await piggy.deployed();
 
