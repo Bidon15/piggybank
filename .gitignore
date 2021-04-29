@@ -5,4 +5,4 @@ cache
 artifacts
 .python-version
 .vscode
-frontend/src/hardhat/*
+frontend/src/hardhat/
