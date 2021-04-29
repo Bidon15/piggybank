@@ -1,4 +1,3 @@
-import { BigNumber } from "@ethersproject/bignumber";
 import { Contract } from "@ethersproject/contracts";
 import { expect } from "chai";
 import { ethers } from "hardhat";
