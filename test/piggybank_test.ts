@@ -13,12 +13,12 @@ describe("PiggyBank", function () {
   });
 
   it("Should return the initialized name of the piggy bank", async function () {
-    expect(await pbank.name()).to.equal("DemoBank");
+    expect(await pbank.getName()).to.equal("DemoBank");
   });
 
   it("Should change the name from DemoBank to Piggy Sliggy", async function () {
     await pbank.setName("PiggySliggy");
-    expect(await pbank.name()).to.equal("PiggySliggy");
+    expect(await pbank.getName()).to.equal("PiggySliggy");
   });
 
   it("Should show added 1 ETH to the piggy bank", async function () {

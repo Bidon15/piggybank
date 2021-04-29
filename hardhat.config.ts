@@ -25,7 +25,7 @@ task("accounts", "Prints the list of accounts", async (args, hre) => {
  */
 export default {
   react: {
-    providerPriority: ["web3modal", "hardhat"],
+    providerPriority:  ["hardhat", "web3modal"],
   },
 
   solidity: {

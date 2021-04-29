@@ -3,7 +3,7 @@ pragma solidity >=0.7.0 <0.9.0;
 
 contract PiggyBank {
     address public owner;
-    string public name;
+    string name;
     uint256 public expirationDate;
     uint256 totalAmount;
 
@@ -16,6 +16,10 @@ contract PiggyBank {
     function setName(string memory _newName) public {
         assert(msg.sender == owner);
         name = _newName;
+    }
+
+    function getName() public view returns(string memory) {
+        return name;
     }
 
     function donate() public payable {
