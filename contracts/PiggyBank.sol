@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: GPL-3.0
 pragma solidity >=0.7.0 <0.9.0;
 
+import "hardhat/console.sol";
+
 contract PiggyBank {
     address public owner;
     string name;
@@ -11,6 +13,7 @@ contract PiggyBank {
         name = _name;
         expirationDate = _expire;
         owner = msg.sender;
+        console.log(name);
     }
 
     function setName(string memory _newName) public {

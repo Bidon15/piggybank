@@ -6,3 +6,4 @@ artifacts
 .python-version
 .vscode
 frontend/src/hardhat/
+deployments
